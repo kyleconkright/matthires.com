@@ -1,0 +1,43 @@
+// VARIABLES
+$margin: 16px;
+$light: #ededed;
+$white:  #f6f6f6;
+$pink: #f1a1b3;
+$lightblue: lightblue;
+$dark: #26272b;
+
+
+
+* {
+	font-size: 103%;
+	color: inherit;
+	font-weight: 400;
+	font-family: Roboto Condensed;
+	line-height: 1.25em;
+	padding: 0;
+	margin: 0;
+	list-style-type: none;
+	text-decoration: none;
+}
+
+*, *:before, *:after { 
+  box-sizing: border-box;
+}
+
+body, html {
+	height: 100%;
+}
+
+body {
+	color: $dark;
+}
+
+
+@media only screen 
+and (max-width : 980px)
+and (orientation: portrait) {
+
+
+}
+
+
