@@ -1,13 +1,12 @@
 (function() {
   $(function() {
     return $.ajax({
-      url: 'data/data.json',
+      url: 'http://api.bandsintown.com/artists/matthires/events.json?callback=?&app_id=hires',
       type: 'GET',
       dataType: 'json',
-      success: function(results) {
-        $('<ul id="menu"></ul>').appendTo('div.section div');
-        return $.each(results.response.nav.links, function() {
-          return $('<li></li>').append('<a href="' + this.href + '">' + this.val + '</a>').appendTo('div.section div ul#menu');
+      success: function(data) {
+        return $.each(data, function() {
+          return $('<li></li>').append('<p class="venue">' + this.venue.name + '</p><p class="city">' + this.venue.city + ', ' + this.venue.region + '</p>').appendTo('.dates');
         });
       }
     });
